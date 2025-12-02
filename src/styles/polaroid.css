@@ -1,0 +1,128 @@
+.polaroid-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.polaroid-light {
+  position: absolute;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  background: #fff;
+  filter: blur(100px);
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.polaroid-wrapper {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1000px;
+}
+
+.polaroid-card {
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  list-style: none;
+  border: 12px solid #fff;
+  background: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: all 1s ease;
+  top: 10px;
+  cursor: pointer;
+}
+
+.polaroid-card img {
+  display: block;
+  width: 200px;
+  height: auto;
+  margin: 0;
+}
+
+.polaroid-card p {
+  margin: 12px 0 0 0;
+  padding: 0 12px 12px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.polaroid-card:hover {
+  top: 0;
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.polaroid-card:nth-child(1) {
+  transform: rotate(10deg);
+}
+
+.polaroid-card:nth-child(1):hover {
+  transform: rotate(10deg) scale(1.05);
+}
+
+.polaroid-card:nth-child(2) {
+  transform: rotate(0deg);
+}
+
+.polaroid-card:nth-child(2):hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.polaroid-card:nth-child(3) {
+  transform: rotate(-10deg);
+}
+
+.polaroid-card:nth-child(3):hover {
+  transform: rotate(-10deg) scale(1.05);
+}
+
+.polaroid-card:nth-child(4) {
+  transform: rotate(20deg);
+}
+
+.polaroid-card:nth-child(4):hover {
+  transform: rotate(20deg) scale(1.05);
+}
+
+.polaroid-card:nth-child(5) {
+  transform: rotate(-15deg);
+}
+
+.polaroid-card:nth-child(5):hover {
+  transform: rotate(-15deg) scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .polaroid-container {
+    min-height: 200px;
+  }
+
+  .polaroid-card {
+    border: 8px solid #fff;
+  }
+
+  .polaroid-card img {
+    width: 150px;
+  }
+
+  .polaroid-card p {
+    margin: 8px 0 0 0;
+    padding: 0 8px 8px;
+    font-size: 12px;
+  }
+
+  .polaroid-wrapper {
+    gap: 15px;
+  }
+}
